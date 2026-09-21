@@ -3,8 +3,8 @@ export class Tanque {
     private destruccion: boolean = false;
 
     constructor(
-        public modelo: string; 
-        public vidamax: number = 100;
+        public modelo: string, 
+        public vidamax: number = 100,
 
     ){
         this.vida = vidamax;
