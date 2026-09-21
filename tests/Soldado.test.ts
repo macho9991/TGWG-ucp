@@ -10,7 +10,11 @@ describe("pueba de la clase Soldado"), () => {
         //aca como que se confirma que nace
         expect(soldado.Vivo()).toBe(true)
 
-        //
+        //aca hago que reciba el disparo o daño
         soldado.RecibirDisparo();
+
+        //aca compruebo si es que muerio o no el soldado
+        expect(soldado.Vivo()).toBe(false);
+
     })
 }
