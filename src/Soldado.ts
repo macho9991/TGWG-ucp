@@ -1,1 +1,1 @@
-import {Combate}  from"../src/Combate"
+import {UnidadMilitar}  from"./UnidadMilitar"

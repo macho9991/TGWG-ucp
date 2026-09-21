@@ -1,4 +1,4 @@
-export class Comnate{
+export class UnidadMilitar{
     private vida: number; 
 
     constructor(VidaInicial:number){
