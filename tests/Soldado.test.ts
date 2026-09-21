@@ -1,7 +1,8 @@
 import {describe, test, expect } from "vitest";
 import { Soldado } from "../src/Soldado";
 
-describe("pueba de la clase Soldado"), () => {
+describe("pueba de la clase Soldado", () => {
+
     test("debe morir de un disparo", () => {
 
         //aca se crea el soldado
@@ -17,4 +18,4 @@ describe("pueba de la clase Soldado"), () => {
         expect(soldado.Vivo()).toBe(false);
 
     })
-}
+});

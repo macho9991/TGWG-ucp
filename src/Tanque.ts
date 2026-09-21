@@ -1,20 +1,7 @@
-export class Tanque {
-    private vida: number;
-    private destruccion: boolean = false;
+import {UnidadMilitar} from "./UnidadMilitar";
 
-    constructor(
-        public modelo: string, 
-        public vidamax: number = 100,
-
-    ){
-        this.vida = vidamax;
+export class Tanque extends UnidadMilitar{
+    constructor (public modelo: string){
+        super(2)
     }
-
-    recibirBala(daño = 1): void {
-    this.vida = Math.max(0, this.vida - daño);
-    
-    } 
-
-
-
 }
