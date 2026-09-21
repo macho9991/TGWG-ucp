@@ -1,4 +1,4 @@
-export class UnidadMilitar{
+export  abstract class UnidadMilitar{
     private vida: number; 
 
     //aca cambie porque estaba mal antes, no era metodo, no estaba creado
@@ -7,8 +7,8 @@ export class UnidadMilitar{
     }
 
     //tenia un error de tipografia
-    public RecibirDisparo(): void{
-        this.vida = this.vida > 0 ? this.vida -1 : 0;
+    public Disparar(objetivo : UnidadMilitar): void{
+        this.vida = this.vida -1  ;
     }
 
     //me falto el ? que es el que evalua la condicion y la operacion matematica

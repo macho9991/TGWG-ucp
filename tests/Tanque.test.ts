@@ -1,17 +1,20 @@
-import { describe, it, expect, test } from "vitest";
-import { Tanque } from "../src/Tanque";
+import {describe, test, expect} from "vitest";
+import {Buque} from "../src/Buque";
+import {Tanque} from "../src/Tanque"
 
-describe("pruebas del tanque", () => {
-    test("debe nacer y morir de 2 disparos", () => {
+describe("pruebas del buque", () => {
+    test("debe nacer y morir de 3 disparos", () => {
+
+        const buque = new Buque("AirShip");
         const tanque = new Tanque("Panzer");
-        expect(tanque.Vivo()).toBe(true);
-        tanque.RecibirDisparo();
-       
-        expect(tanque.Vivo()).toBe(true);
-        tanque.RecibirDisparo();
 
+
+        expect(tanque.Vivo()).toBe(true);
         
-        expect(tanque.Vivo()).toBe(false);
+        buque.Disparar(buque);
+
+        expect(tanque.Vivo()).toBe(true);
+       
         
         
 
