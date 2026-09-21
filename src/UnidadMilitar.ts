@@ -7,7 +7,7 @@ export class UnidadMilitar{
     }
 
     //tenia un error de tipografia
-    public RecibirDisparo(). void{
+    public RecibirDisparo(): void{
         this.vida = this.vida > 0 ? this.vida -1 : 0;
     }
 
