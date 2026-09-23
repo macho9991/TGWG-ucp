@@ -4,26 +4,24 @@ import {Tanque} from "../src/Tanque"
 import {Pistola} from "../src/Pistola"
 
 describe("pruebas del buque", () => {
-    test("debe nacer y morir de 3 disparos", () => {
+    test("debe nacer y morir de 2 disparos", () => {
 
-        const buque = new Buque("AirShip");
+       
         const tanque = new Tanque("Panzer");
         const pistola = new Pistola();
+        const buque = new Buque("Airship")
 
 
-        expect(buque.Vivo()).toBe(true);
+        expect(tanque.Vivo()).toBe(true);
         
-        tanque.Disparar(buque, pistola);
+        buque.Disparar(tanque, pistola);
 
-        expect( buque.Vivo()).toBe(true);
+        expect(tanque.Vivo()).toBe(true);
        
-        tanque.Disparar(buque,pistola);
+        buque.Disparar(tanque,pistola);
         
-        expect(buque.Vivo()).toBe(true);
-       
-        tanque.Disparar(buque,pistola);
 
-        expect(buque.Vivo()).toBe(false);
+        expect(tanque.Vivo()).toBe(false);
         
 
     })

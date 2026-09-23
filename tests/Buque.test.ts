@@ -17,6 +17,14 @@ describe("pruebas del buque", () => {
         soldado.Disparar(buque,pistola);
        
         expect(buque.Vivo()).toBe(true);
+
+        soldado.Disparar(buque,pistola);
+       
+        expect(buque.Vivo()).toBe(true);
+
+        soldado.Disparar(buque,pistola);
+       
+        expect(buque.Vivo()).toBe(false);
  
 
 
