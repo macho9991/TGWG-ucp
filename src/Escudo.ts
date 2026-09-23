@@ -6,7 +6,7 @@ export class Escudo {
     this.porcentajeEsc = porcentaje;
 
  }
- public reducirDanio (daño: number): number{
+ public reducirDanio (danio: number): number{
     return danio *(1-this.porcentajeEsc/100)
  }
 }

@@ -1,4 +1,5 @@
 import {Escudo} from "./Escudo";
+import {ArmaBase} from "./ArmaBase"
 export  abstract class UnidadMilitar{
     private vida: number; 
     private escudo: Escudo;
@@ -14,12 +15,13 @@ export  abstract class UnidadMilitar{
     }
 
     //tenia un error de tipografia
-    public Disparar(objetivo : UnidadMilitar): void{
-        objetivo.recibirDisparo();
+    public Disparar(objetivo : UnidadMilitar, arma: ArmaBase): void{
+        objetivo.recibirDisparo(arma.dispararBala());
     }
 
-     public recibirDisparo(): void{
-       this.vida=this.vida-1;
+     public recibirDisparo(danio: number): void{
+       const danioFinal = this.escudo.reducirDanio(danio);
+       this.vida = this.vida -danioFinal;
     }
 
 
