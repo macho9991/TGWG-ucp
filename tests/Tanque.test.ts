@@ -9,13 +9,19 @@ describe("pruebas del buque", () => {
         const tanque = new Tanque("Panzer");
 
 
-        expect(tanque.Vivo()).toBe(true);
+        expect(buque.Vivo()).toBe(true);
         
-        buque.Disparar(buque);
+        tanque.Disparar(buque);
 
-        expect(tanque.Vivo()).toBe(true);
+        expect( buque.Vivo()).toBe(true);
        
+        tanque.Disparar(buque);
         
+        expect(buque.Vivo()).toBe(true);
+       
+        tanque.Disparar(buque);
+
+        expect(buque.Vivo()).toBe(false);
         
 
     })
