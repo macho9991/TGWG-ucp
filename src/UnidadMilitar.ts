@@ -1,9 +1,16 @@
+import {Escudo} from "./Escudo";
 export  abstract class UnidadMilitar{
     private vida: number; 
+    private escudo: Escudo;
 
     //aca cambie porque estaba mal antes, no era metodo, no estaba creado
     constructor(VidaInicial:number){
         this.vida = VidaInicial;
+        this.escudo = new Escudo(0);
+    }
+
+    public asignarEscudo(escudo:Escudo): void {
+          this.escudo = escudo;
     }
 
     //tenia un error de tipografia
