@@ -6,4 +6,6 @@ describe("prueba del escudo", () => {
         const escudo = new Escudo(50); //esto basicamente es como que crea un escudo que reduce el daño en 50 %
         expect(escudo.reducirDanio(10)).toBe(5);
     })
+
+    
 })

@@ -6,5 +6,14 @@ describe("pruebas de la pistola", () => {
         const pistola = new Pistola();
         const danio =  pistola. dispararBala();
         expect(danio).toBe(1);
+
+    })
+    test("sin municion no debe hacer daño", ()=>{
+        const pistola = new Pistola();
+        for(let i=0; i<10; i++){
+            pistola.dispararBala();//el for repite el disparo 10 veces
+        }
+        const danio= pistola.dispararBala();
+        expect(danio).toBe(0);
     })
 })
